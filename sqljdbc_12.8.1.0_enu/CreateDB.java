@@ -40,15 +40,14 @@ public class CreateDB {
     //
     //
     String url = "jdbc:sqlserver://myfreeserver1.database.windows.net:1433;database=database1;user=Alfonso@myfreeserver1;password={Frutilla123};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
-    String username = "<Alfonso@myfreeserver1>";
-    String password = "<Frutilla123>";
+
     Connection connection = null;
 
     try {
       // Load the SQL Server JDBC driver
 
       // Establish the connection
-      connection = DriverManager.getConnection(url, username, password);
+      connection = DriverManager.getConnection(url);
 
     } catch (SQLException e) {
       System.err.println("Connection failed.");
